@@ -32,7 +32,7 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol{
                                
 
                            
-                        print(filteredData)
+                    
                     }
                 }catch{
                     print(error.localizedDescription)
@@ -41,22 +41,6 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol{
         }
     }
     
-    func yemekSil(yemek_id: String) {
-        let params:Parameters = ["yemek_id":yemek_id]
-        
-        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .post,parameters: params).response{ response in
-            if let data = response.data {
-                do{
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        print(json)
-                        self.tumYemekleriAl()
-                    }
-                }catch{
-                    print(error.localizedDescription)
-                }
-            }
-        }
-    }
     
     var anasayfaPresenter: InteractorToPresenterAnasayfaProtocol?
     

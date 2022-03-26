@@ -24,6 +24,12 @@
 		10BF26CF27EB84F400762278 /* AnasayfaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26CE27EB84F400762278 /* AnasayfaRouter.swift */; };
 		10BF26D227EB876A00762278 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 10BF26D127EB876A00762278 /* Alamofire */; };
 		10BF26D827EC521100762278 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 10BF26D727EC521100762278 /* Kingfisher */; };
+		10BF26EB27EDBC8300762278 /* GirisSayfasiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26EA27EDBC8300762278 /* GirisSayfasiVC.swift */; };
+		10BF26ED27EDBCA900762278 /* KayitSayfasiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26EC27EDBCA900762278 /* KayitSayfasiVC.swift */; };
+		10BF26F027EDBD6300762278 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26EF27EDBD6300762278 /* DataBase.swift */; };
+		10BF26F227EDBEF000762278 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26F127EDBEF000762278 /* Kisiler.swift */; };
+		10BF26F527EDBFE300762278 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 10BF26F427EDBFE300762278 /* SQLite */; };
+		10BF26F927EEFBDE00762278 /* YemekDetayProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF26F827EEFBDE00762278 /* YemekDetayProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,11 @@
 		10BF26CA27EB84B900762278 /* AnasayfaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaInteractor.swift; sourceTree = "<group>"; };
 		10BF26CC27EB84D800762278 /* AnasayfaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaPresenter.swift; sourceTree = "<group>"; };
 		10BF26CE27EB84F400762278 /* AnasayfaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaRouter.swift; sourceTree = "<group>"; };
+		10BF26EA27EDBC8300762278 /* GirisSayfasiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisSayfasiVC.swift; sourceTree = "<group>"; };
+		10BF26EC27EDBCA900762278 /* KayitSayfasiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KayitSayfasiVC.swift; sourceTree = "<group>"; };
+		10BF26EF27EDBD6300762278 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		10BF26F127EDBEF000762278 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		10BF26F827EEFBDE00762278 /* YemekDetayProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekDetayProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BF26F527EDBFE300762278 /* SQLite in Frameworks */,
 				10BF26D827EC521100762278 /* Kingfisher in Frameworks */,
 				10BF26D227EB876A00762278 /* Alamofire in Frameworks */,
 			);
@@ -80,11 +92,13 @@
 			children = (
 				10BF269527EB710500762278 /* AppDelegate.swift */,
 				10BF269727EB710500762278 /* SceneDelegate.swift */,
-				10BF26AD27EB77EA00762278 /* anasayfa-module */,
 				10BF269B27EB710500762278 /* Main.storyboard */,
+				10BF26AD27EB77EA00762278 /* anasayfa-module */,
 				10BF26B427EB787B00762278 /* yemeksepeti-module */,
 				10BF26BB27EB79AC00762278 /* yemekdetay-module */,
 				10BF26BA27EB797000762278 /* entity */,
+				10BF26DD27EDBB9700762278 /* kullanicikayit-module */,
+				10BF26DB27EDBB7100762278 /* kullanicigirisi-module */,
 				10BF269E27EB710600762278 /* Assets.xcassets */,
 				10BF26A027EB710600762278 /* LaunchScreen.storyboard */,
 				10BF26A327EB710600762278 /* Info.plist */,
@@ -206,6 +220,7 @@
 			children = (
 				10BF26C327EB844400762278 /* Yemekler.swift */,
 				10BF26C527EB846400762278 /* YemeklerCevap.swift */,
+				10BF26F127EDBEF000762278 /* Kisiler.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -225,6 +240,7 @@
 		10BF26BC27EB79D100762278 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				10BF26F827EEFBDE00762278 /* YemekDetayProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -258,6 +274,47 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		10BF26DB27EDBB7100762278 /* kullanicigirisi-module */ = {
+			isa = PBXGroup;
+			children = (
+				10BF26E727EDBC0F00762278 /* view */,
+			);
+			path = "kullanicigirisi-module";
+			sourceTree = "<group>";
+		};
+		10BF26DD27EDBB9700762278 /* kullanicikayit-module */ = {
+			isa = PBXGroup;
+			children = (
+				10BF26EE27EDBCE900762278 /* data */,
+				10BF26E227EDBBF100762278 /* view */,
+			);
+			path = "kullanicikayit-module";
+			sourceTree = "<group>";
+		};
+		10BF26E227EDBBF100762278 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10BF26EC27EDBCA900762278 /* KayitSayfasiVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		10BF26E727EDBC0F00762278 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10BF26EA27EDBC8300762278 /* GirisSayfasiVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		10BF26EE27EDBCE900762278 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				10BF26EF27EDBD6300762278 /* DataBase.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +334,7 @@
 			packageProductDependencies = (
 				10BF26D127EB876A00762278 /* Alamofire */,
 				10BF26D727EC521100762278 /* Kingfisher */,
+				10BF26F427EDBFE300762278 /* SQLite */,
 			);
 			productName = YemekPisirmeUygulamasi;
 			productReference = 10BF269227EB710500762278 /* YemekPisirmeUygulamasi.app */;
@@ -309,6 +367,7 @@
 			packageReferences = (
 				10BF26D027EB876A00762278 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				10BF26D627EC521100762278 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				10BF26F327EDBFE300762278 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 10BF269327EB710500762278 /* Products */;
 			projectDirPath = "";
@@ -345,9 +404,14 @@
 				10BF26C627EB846400762278 /* YemeklerCevap.swift in Sources */,
 				10BF26C427EB844400762278 /* Yemekler.swift in Sources */,
 				10BF269827EB710500762278 /* SceneDelegate.swift in Sources */,
+				10BF26F927EEFBDE00762278 /* YemekDetayProtocols.swift in Sources */,
+				10BF26EB27EDBC8300762278 /* GirisSayfasiVC.swift in Sources */,
 				10BF26C227EB7C1100762278 /* CollectionVC.swift in Sources */,
+				10BF26F027EDBD6300762278 /* DataBase.swift in Sources */,
+				10BF26F227EDBEF000762278 /* Kisiler.swift in Sources */,
 				10BF26CD27EB84D800762278 /* AnasayfaPresenter.swift in Sources */,
 				10BF26CB27EB84B900762278 /* AnasayfaInteractor.swift in Sources */,
+				10BF26ED27EDBCA900762278 /* KayitSayfasiVC.swift in Sources */,
 				10BF26AC27EB722400762278 /* YemekSepetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +650,14 @@
 				kind = branch;
 			};
 		};
+		10BF26F327EDBFE300762278 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -598,6 +670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 10BF26D627EC521100762278 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		10BF26F427EDBFE300762278 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10BF26F327EDBFE300762278 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
