@@ -15,11 +15,7 @@ class AnasayfaPresenter : ViewToPresenterAnasayfaProtocol{
     func ara(aramaKelimesi: String) {
         anasayfaInteractor?.yemekAra(aramaKelimesi: aramaKelimesi)
     }
-    
-    func sil(yemek_id: String) {
-        anasayfaInteractor?.yemekSil(yemek_id: yemek_id)
-    }
-    
+
   
     
     func yemekleriYukle() {
