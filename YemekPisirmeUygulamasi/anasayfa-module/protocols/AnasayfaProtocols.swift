@@ -13,7 +13,7 @@ protocol ViewToPresenterAnasayfaProtocol {//Presenter Katmanı
     
     func yemekleriYukle()
     func ara(aramaKelimesi:String)
-  
+    func sil(yemek_id:String)
 }
 
 protocol PresenterToInteractorAnasayfaProtocol {//Interactor Katmanı
@@ -22,7 +22,7 @@ protocol PresenterToInteractorAnasayfaProtocol {//Interactor Katmanı
  
     func tumYemekleriAl()
     func yemekAra(aramaKelimesi:String)
-
+    func yemekSil(yemek_id:String)
 }
 
 protocol InteractorToPresenterAnasayfaProtocol {

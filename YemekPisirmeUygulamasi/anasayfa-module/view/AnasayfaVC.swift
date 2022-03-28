@@ -5,18 +5,15 @@
 //  Created by Furkan Sengil on 23.03.2022.
 //
 
-
 import UIKit
 import Kingfisher
 
 class AnasayfaVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
-    @IBOutlet weak var hesapKapamaButton: UIButton!
-    @IBOutlet weak var grisVeKayitAlani: UIStackView!
     
     var yemeklerListesi = [Yemekler]()
-    var bilgiler:[String] = []
+    
     var anasayfaPresenterNesnesi:ViewToPresenterAnasayfaProtocol?
     
     override func viewDidLoad() {
@@ -29,34 +26,19 @@ class AnasayfaVC: UIViewController {
         AnasayfaRouter.createModule(ref: self)
         
         let tasarim = UICollectionViewFlowLayout()
-        tasarim.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        tasarim.minimumInteritemSpacing = 20
-        tasarim.minimumLineSpacing = 20
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        tasarim.minimumInteritemSpacing = 10
+        tasarim.minimumLineSpacing = 10
         
         let genislik =  self.yemeklerCollectionView.frame.size.width
-        tasarim.itemSize = CGSize(width: (genislik-50)/2, height: (genislik-50)/2)
+        tasarim.itemSize = CGSize(width: (genislik-40)/2, height: (genislik-30)/2)
         yemeklerCollectionView.collectionViewLayout = tasarim
         
-       
-    }
-    @IBAction func hesapKapamaButton(_ sender: Any) {
-        bilgiler = []
-        hesapKapamaButton.isHidden = true
-        grisVeKayitAlani.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //Anasayfa ilk açıldığında ve anasayfaya geri döndüğümüzde çalışır.
         anasayfaPresenterNesnesi?.yemekleriYukle()
-        print(bilgiler)
-       
-        if bilgiler == []{
-            hesapKapamaButton.isHidden = true
-            grisVeKayitAlani.isHidden = false
-        }else{
-            hesapKapamaButton.isHidden = false
-            grisVeKayitAlani.isHidden = true
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +48,6 @@ class AnasayfaVC: UIViewController {
             gidilecekVC.yemek = yemek
         }
     }
-   
     
 }
 
@@ -83,29 +64,7 @@ extension AnasayfaVC : UISearchBarDelegate {
         anasayfaPresenterNesnesi?.ara(aramaKelimesi: searchText)
     }
 }
-extension AnasayfaVC : UICollectionViewDelegate,UICollectionViewDataSource,HucreProtocol {
-    func buttonTiklandi(indexPath: IndexPath) {
-        
-        if bilgiler == [] {
-            // create the alert
-                   let alert = UIAlertController(title: "Hesap bulunamadı", message: "Detay sayfasını görüntülemek için giriş yapmanız gerekmektedir.", preferredStyle: UIAlertController.Style.alert)
-
-                   // add an action (button)
-                   alert.addAction(UIAlertAction(title: "tamam", style: UIAlertAction.Style.default, handler: nil))
-
-                   // show the alert
-                   self.present(alert, animated: true, completion: nil)
-        }else{
-            
-            let yemek = yemeklerListesi[indexPath.row]
-         
-            yemek.kullanici_adi = bilgiler[1]
-            
-            performSegue(withIdentifier: "toDetay", sender: yemek)
-        }
-        
-    }
-    
+extension AnasayfaVC : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return yemeklerListesi.count
     }
@@ -121,11 +80,10 @@ extension AnasayfaVC : UICollectionViewDelegate,UICollectionViewDataSource,Hucre
                 cell.resim.kf.setImage(with:url)
             }
         }
-        cell.hucreProtocol = self
-        cell.indexPath = indexPath
+        
         
         return cell
     }
-   
+    
 
 }
