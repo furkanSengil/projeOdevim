@@ -25,7 +25,7 @@ class DataBase {
     init () {
 
         var path = NSSearchPathForDirectoriesInDomains( .documentDirectory, .userDomainMask, true).first!
-
+print(path)
     
         do {
 

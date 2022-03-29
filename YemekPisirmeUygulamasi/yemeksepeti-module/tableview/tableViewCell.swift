@@ -26,8 +26,6 @@ class tableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func adetAyari(_ sender: UIStepper) {
-        yemekAdeti.text = String(Int(sender.value))
-    }
+
     
 }

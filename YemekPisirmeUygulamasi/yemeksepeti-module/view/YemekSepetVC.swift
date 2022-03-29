@@ -11,6 +11,7 @@ class YemekSepetVC: UIViewController {
     var sepetsayfaPresenterNesnesi:ViewToPresenterSepetProtocol?
     @IBOutlet weak var sepetTableView: UITableView!
     
+    @IBOutlet weak var toplamTutar: UILabel!
     
 
     var yemeklistesi = [SepetYemekleri]()
@@ -31,15 +32,15 @@ class YemekSepetVC: UIViewController {
         sepetsayfaPresenterNesnesi?.sepettekileriGetir(kullanici_adi: AnasayfaVC.kullaniciadi)
     }
     
-    func calculateTotalCost(){
-        var totalCost = 0
-        var foodPrice = 0
+    func toplamTutarHesapla(){
+        var toplamTutar = 0
+        var yemekAdedi = 0
         
         for f in yemeklistesi {
-            foodPrice = Int(f.yemek_fiyat!)! * Int(f.yemek_siparis_adet!)!
-            totalCost += foodPrice
+            yemekAdedi = Int(f.yemek_fiyat!)! * Int(f.yemek_siparis_adet!)!
+            toplamTutar += yemekAdedi
         }
-       // self.totalPriceLabel.text = "\(totalCost) ₺"
+        self.toplamTutar.text = "\(toplamTutar) ₺"
     }
     
     @IBAction func confirmBasketTapped(_ sender: Any) {
@@ -61,14 +62,14 @@ class YemekSepetVC: UIViewController {
         var basketItemCount = ud.integer(forKey: "basketItemCount")
         basketItemCount = 0
         ud.set(basketItemCount, forKey: "basketItemCount")
-      //   self.basketTabItem.badgeValue = nil
+      //  self.basketTabItem.badgeValue = nil
         }
 }
 
 extension YemekSepetVC : PresenterToViewSepetProtocol {
     func sendDataToView(yemeklistesi: Array<SepetYemekleri>) {
         self.yemeklistesi = yemeklistesi
-        calculateTotalCost()
+        toplamTutarHesapla()
  
         DispatchQueue.main.async {
             self.sepetTableView.reloadData()
@@ -86,7 +87,7 @@ extension YemekSepetVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewHucre", for: indexPath) as! tableViewCell
         cell.yemekAdi.text = basketFood.yemek_adi
         cell.yemekAdeti.text = "\(basketFood.yemek_siparis_adet!)"
-        cell.yemekFiyati.text = "Fiyat: \(Int(basketFood.yemek_fiyat!)! * Int(basketFood.yemek_siparis_adet!)!) ₺"
+        cell.yemekFiyati.text = "\(Int(basketFood.yemek_fiyat!)! * Int(basketFood.yemek_siparis_adet!)!) ₺"
         
         DispatchQueue.main.async {
             cell.yemekResim.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(basketFood.yemek_resim_adi!)"))
