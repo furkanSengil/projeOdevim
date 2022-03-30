@@ -36,6 +36,10 @@ class YemekDetayVC: UIViewController {
         yemekAdeti.text = String(Int(sender.value))
     }
     
+    @IBAction func detayKapamaButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func sepeteEklemeButtonu(_ sender: Any) {
         yemek?.yemek_siparis_adet = yemekAdeti.text
         YemekDetayVC.sepet.append(yemek!)

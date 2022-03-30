@@ -8,26 +8,24 @@
 import Foundation
 import Alamofire
 class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol{
-    
-    
+
     func yemekAra(aramaKelimesi: String) {
-        let params:Parameters = ["yemek_adi":aramaKelimesi]
         
-        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .post,parameters: params).response{ response in
+        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .get).response{ response in
             if let data = response.data {
                 do{
+                    var aramaListesi = [Yemekler]()
                     let cevap = try JSONDecoder().decode(YemeklerCevap.self, from: data)
                     if let gelenListe = cevap.yemekler {
-                        //yemek listesindeki adları string biçiminde diziye atadım
-                        var adDizisi = [String]()
-                        for adlar in gelenListe{
-                            adDizisi.append((adlar.yemek_adi)!)
-                           // print(adDizisi)
+                                        
+                        aramaListesi = gelenListe.filter { yemek in
+                            if yemek.yemek_adi!.lowercased().contains(aramaKelimesi.lowercased()) || aramaKelimesi == ""
+                            { return true
+                            }else {
+                                return false
+                            }
                         }
-                        var filteredData = [String]()
-                        filteredData = adDizisi.filter { item in
-                                    item.localizedCaseInsensitiveContains(aramaKelimesi)
-                                }  
+                        self.anasayfaPresenter?.preseneteraVeriGonder(yemeklerListesi: aramaListesi)
                     }
                 }catch{
                     print(error.localizedDescription)
@@ -35,8 +33,6 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol{
             }
         }
     }
-    
-    
     var anasayfaPresenter: InteractorToPresenterAnasayfaProtocol?
     
     func tumYemekleriAl() {

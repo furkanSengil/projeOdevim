@@ -190,7 +190,6 @@
 		10BF26B427EB787B00762278 /* yemeksepeti-module */ = {
 			isa = PBXGroup;
 			children = (
-				10F9B9D627EF420A00806EEB /* tableview */,
 				10BF26B927EB795A00762278 /* view */,
 				10BF26B827EB795200762278 /* router */,
 				10BF26B727EB794700762278 /* presenter */,
@@ -236,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				10BF26AB27EB722400762278 /* YemekSepetVC.swift */,
+				10F9B9D627EF420A00806EEB /* tableview */,
 			);
 			path = view;
 			sourceTree = "<group>";

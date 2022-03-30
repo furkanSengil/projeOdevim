@@ -24,6 +24,7 @@ class SepetsayfaInteractor : PresenterToInteractorSepettProtocol {
                     }
                     self.sepetPresenter?.preseneteraVeriGonder(yemeklistesi: list)
                 }catch{
+                    self.sepetPresenter?.preseneteraVeriGonder(yemeklistesi: [])
                     print(error.localizedDescription)
                 }
             }
@@ -44,7 +45,7 @@ class SepetsayfaInteractor : PresenterToInteractorSepettProtocol {
                             self.tumsepetiGetir(kullanici_adi: kullanici_adi)
                         }
                     } catch {
-                        print(error.localizedDescription)
+                        print(String(describing: error))
                     }
                 }
             }
