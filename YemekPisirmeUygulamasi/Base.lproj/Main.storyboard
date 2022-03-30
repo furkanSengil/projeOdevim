@@ -500,7 +500,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEU-j2-Ydi">
                                         <rect key="frame" x="67" y="168.5" width="280" height="471"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2Q-a3-J1v">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2Q-a3-J1v">
                                                 <rect key="frame" x="65" y="30" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="d1r-ev-z7B"/>
@@ -590,6 +590,7 @@
                                             <constraint firstAttribute="height" constant="471" id="AAe-TQ-9tw"/>
                                             <constraint firstAttribute="width" constant="280" id="Gks-Wv-tG2"/>
                                             <constraint firstItem="oFt-9j-EIS" firstAttribute="centerX" secondItem="jEU-j2-Ydi" secondAttribute="centerX" id="IUv-rb-5Ho"/>
+                                            <constraint firstItem="oFt-9j-EIS" firstAttribute="top" secondItem="m2Q-a3-J1v" secondAttribute="bottom" constant="40.5" id="RCx-8w-7tZ"/>
                                             <constraint firstItem="m2Q-a3-J1v" firstAttribute="centerX" secondItem="jEU-j2-Ydi" secondAttribute="centerX" id="SSu-yV-X3m"/>
                                             <constraint firstItem="8Iv-hf-Q00" firstAttribute="leading" secondItem="jEU-j2-Ydi" secondAttribute="leading" constant="20" id="TOJ-OQ-Y54"/>
                                             <constraint firstAttribute="bottom" secondItem="GYG-f6-pdX" secondAttribute="bottom" constant="70" id="V8x-2M-z5W"/>
@@ -815,11 +816,11 @@
             </objects>
             <point key="canvasLocation" x="3521.739130434783" y="6.6964285714285712"/>
         </scene>
-        <!--Item-->
+        <!--YEMEKLER-->
         <scene sceneID="s52-1I-GZP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kZY-XY-fhe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="e15-Gr-Qjk"/>
+                    <tabBarItem key="tabBarItem" title="YEMEKLER" image="house.fill" catalog="system" id="e15-Gr-Qjk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pBI-Gr-gKK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -839,11 +840,11 @@
             </objects>
             <point key="canvasLocation" x="1986" y="-680"/>
         </scene>
-        <!--Item-->
+        <!--SEPET-->
         <scene sceneID="x5x-Ng-xxz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j5P-q1-dWP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="cart.fill" catalog="system" id="PCd-vM-Nlp"/>
+                    <tabBarItem key="tabBarItem" title="SEPET" image="cart.fill" catalog="system" id="PCd-vM-Nlp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vec-0h-KoA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
