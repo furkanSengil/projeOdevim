@@ -43,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		10BF269227EB710500762278 /* YemekPisirmeUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YemekPisirmeUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BF269227EB710500762278 /* YEDOY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YEDOY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BF269527EB710500762278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10BF269727EB710500762278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		10BF269927EB710500762278 /* AnasayfaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaVC.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		10BF268927EB710500762278 = {
 			isa = PBXGroup;
 			children = (
-				10BF269427EB710500762278 /* YemekPisirmeUygulamasi */,
+				10BF269427EB710500762278 /* YEDOY */,
 				10BF269327EB710500762278 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,12 +102,12 @@
 		10BF269327EB710500762278 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10BF269227EB710500762278 /* YemekPisirmeUygulamasi.app */,
+				10BF269227EB710500762278 /* YEDOY.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		10BF269427EB710500762278 /* YemekPisirmeUygulamasi */ = {
+		10BF269427EB710500762278 /* YEDOY */ = {
 			isa = PBXGroup;
 			children = (
 				10BF269527EB710500762278 /* AppDelegate.swift */,
@@ -123,7 +123,7 @@
 				10BF26A027EB710600762278 /* LaunchScreen.storyboard */,
 				10BF26A327EB710600762278 /* Info.plist */,
 			);
-			path = YemekPisirmeUygulamasi;
+			path = YEDOY;
 			sourceTree = "<group>";
 		};
 		10BF26AD27EB77EA00762278 /* anasayfa-module */ = {
@@ -356,9 +356,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		10BF269127EB710500762278 /* YemekPisirmeUygulamasi */ = {
+		10BF269127EB710500762278 /* YEDOY */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10BF26A627EB710600762278 /* Build configuration list for PBXNativeTarget "YemekPisirmeUygulamasi" */;
+			buildConfigurationList = 10BF26A627EB710600762278 /* Build configuration list for PBXNativeTarget "YEDOY" */;
 			buildPhases = (
 				10BF268E27EB710500762278 /* Sources */,
 				10BF268F27EB710500762278 /* Frameworks */,
@@ -368,14 +368,14 @@
 			);
 			dependencies = (
 			);
-			name = YemekPisirmeUygulamasi;
+			name = YEDOY;
 			packageProductDependencies = (
 				10BF26D127EB876A00762278 /* Alamofire */,
 				10BF26D727EC521100762278 /* Kingfisher */,
 				10BF26F427EDBFE300762278 /* SQLite */,
 			);
 			productName = YemekPisirmeUygulamasi;
-			productReference = 10BF269227EB710500762278 /* YemekPisirmeUygulamasi.app */;
+			productReference = 10BF269227EB710500762278 /* YEDOY.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -393,7 +393,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 10BF268D27EB710500762278 /* Build configuration list for PBXProject "YemekPisirmeUygulamasi" */;
+			buildConfigurationList = 10BF268D27EB710500762278 /* Build configuration list for PBXProject "YEDOY" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -411,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10BF269127EB710500762278 /* YemekPisirmeUygulamasi */,
+				10BF269127EB710500762278 /* YEDOY */,
 			);
 		};
 /* End PBXProject section */
@@ -611,7 +611,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B657Z624PS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YemekPisirmeUygulamasi/Info.plist;
+				INFOPLIST_FILE = YEDOY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -622,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = furkanSengil.YemekPisirmeUygulamasi;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanSengil.YEDOY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -639,7 +639,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B657Z624PS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YemekPisirmeUygulamasi/Info.plist;
+				INFOPLIST_FILE = YEDOY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -650,7 +650,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = furkanSengil.YemekPisirmeUygulamasi;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanSengil.YEDOY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -661,7 +661,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10BF268D27EB710500762278 /* Build configuration list for PBXProject "YemekPisirmeUygulamasi" */ = {
+		10BF268D27EB710500762278 /* Build configuration list for PBXProject "YEDOY" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10BF26A427EB710600762278 /* Debug */,
@@ -670,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		10BF26A627EB710600762278 /* Build configuration list for PBXNativeTarget "YemekPisirmeUygulamasi" */ = {
+		10BF26A627EB710600762278 /* Build configuration list for PBXNativeTarget "YEDOY" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10BF26A727EB710600762278 /* Debug */,
