@@ -9,7 +9,7 @@
 
 * Kingfisher
 
-## Uygulumanın özellikleri
+## Uygulamanın özellikleri
 
 * kayıt
 
